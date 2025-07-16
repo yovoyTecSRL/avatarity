@@ -30,7 +30,9 @@ export const localConfig = {
   development: {
     debug: true,
     verbose: true,
-    autoReload: true
+    autoReload: true,
+    branch: 'dev',
+    version: '1.0.0-dev'
   },
 
   // Configuración de avatares personalizados
