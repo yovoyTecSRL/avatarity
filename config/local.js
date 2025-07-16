@@ -36,10 +36,18 @@ const localConfig = {
 
   // Configuración de desarrollo
   development: {
+  dev
+    debug: true,
+    verbose: true,
+    autoReload: true,
+    branch: 'dev',
+    version: '1.0.0-dev'
+
     debug: process.env.NODE_ENV === 'development',
     verbose: process.env.VERBOSE === 'true',
     autoReload: process.env.NODE_ENV === 'development',
     livereload: process.env.NODE_ENV === 'development'
+    copilot/fix-a7db1158-368f-4139-b9dc-b1c71047bdb7
   },
 
   // Configuración de avatares personalizados
