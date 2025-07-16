@@ -6,6 +6,26 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+// Live reload setup for development
+if (process.env.NODE_ENV !== 'production') {
+  const livereload = require('livereload');
+  const connectLivereload = require('connect-livereload');
+  
+  // Create livereload server
+  const liveReloadServer = livereload.createServer();
+  liveReloadServer.watch(path.join(__dirname, 'public'));
+  
+  // Ping browser on Express server restart
+  liveReloadServer.server.once("connection", () => {
+    setTimeout(() => {
+      liveReloadServer.refresh("/");
+    }, 100);
+  });
+  
+  // Add livereload middleware
+  app.use(connectLivereload());
+}
+
 // Middleware
 app.use(cors());
 app.use(express.json());

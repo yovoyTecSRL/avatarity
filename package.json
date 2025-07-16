@@ -4,8 +4,8 @@
   "description": "Ambiente local para TalkingHead - Avatares 3D interactivos",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "NODE_ENV=development nodemon server.js",
     "clone-talkinghead": "node scripts/clone-talkinghead.js",
     "setup": "npm run clone-talkinghead && npm start",
     "clean": "rm -rf public/modules public/avatars public/animations public/audio public/index.html public/siteconfig.js"

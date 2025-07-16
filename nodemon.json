@@ -1,0 +1,9 @@
+{
+  "watch": ["server.js", "public/**/*"],
+  "ext": "js,html,css,json",
+  "ignore": ["node_modules/", "public/modules/", "public/avatars/"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "delay": "1000"
+}
